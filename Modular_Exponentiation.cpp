@@ -30,4 +30,4 @@ int main()
 }
 
 //Time complexity: O(log N)
-//Memory complexity: O(1)
+//Memory complexity: O(logn) for recursive O(1) for iterative .

@@ -28,9 +28,10 @@ void dfs(int s , int p)
         }
         else
         {
-            child++;
+            
             if(!vis[v])
             {
+                child++;
                 dfs(v , s);
                 low[s] = min(low[s] , low[v]);
                 if(disc[s] <= low[v] && parent[s]!=-1)

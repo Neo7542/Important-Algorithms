@@ -32,7 +32,7 @@ void dfs(int s , int p)
             if(!vis[v])
             {
                 dfs(v , s);
-                
+                low[s] = min(low[s] , low[v]);
                 if(disc[s] <= low[v] && parent[s]!=-1)
                 {
                     arti.pb(s);
@@ -42,7 +42,8 @@ void dfs(int s , int p)
                     arti.pb(s);
                 }
             }
-            low[s] = min(low[s] , low[v]);
+            else
+                low[s] = min(low[s] , disc[v]);
         }
     }
     
